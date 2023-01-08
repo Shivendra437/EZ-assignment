@@ -33,7 +33,9 @@ export default function Reuse(props) {
       <Stack>
         <Item style={abc}>
           <span>Service</span>
-          <span>Units</span>
+          <span style={{ position: "relative", marginLeft: "57px" }}>
+            Units
+          </span>
           <span>LastPrice</span>
           <span>Offered Price</span>
           <span>Discount</span>

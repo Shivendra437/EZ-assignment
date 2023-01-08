@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -10,16 +11,28 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary
 }));
-let arr = [
-  { name: "Company name", ccde: "CCDE", en: "8 Entities", user: "64 user" },
-  {
-    name: "company name",
-    ccde: "CCDE",
-    en: "8 Entities",
-    user: "64 user"
-  }
-];
+let arr = {
+  name: "Company name",
+  ccde: "CCDE",
+  en: "8 Entities",
+  user: "64 user"
+};
+// const[name,setName]=useState({name:'CompanyName'});
+var arr2 = [];
+arr2.push(arr);
+arr2.push(arr);
+arr2.push(arr);
+arr2.push(arr);
+arr2.push(arr);
+arr2.push(arr);
+arr2.push(arr);
+
 export default function Client() {
+  // const handler=()=>{
+  //   // e.preventDefault()
+  //   setName({name:'Mickey'})
+  // }
+  const [name, setName] = useState("CompanyName");
   return (
     <div
       style={{
@@ -30,38 +43,43 @@ export default function Client() {
       }}
     >
       <Stack dirction="column" spacing={1}>
-        {arr.map((el) => (
-          <Item
-            sx={{
-              width: "250px",
-              borderRadius: "15px",
-              "&:hover": {
-                backgroundColor: "grey",
-                cursor: "pointer"
-              }
-            }}
+        {arr2.map((el) => (
+          <button
+            onClick={() => setName("Mckinsey & Company")}
+            style={{ border: "none" }}
           >
-            <Box
-              style={{
-                display: "flex",
-                direction: "cloumn",
-                justifyContent: "space-between"
+            <Item
+              sx={{
+                width: "250px",
+                borderRadius: "15px",
+                "&:hover": {
+                  backgroundColor: "grey",
+                  cursor: "pointer"
+                }
               }}
             >
-              <span>CompanyName</span>
-              <span>CCDE</span>
-            </Box>
-            <Box
-              style={{
-                fontSize: "12px",
-                display: "flex",
-                direction: "column",
-                justifyContent: "space-between"
-              }}
-            >
-              <span>8 Entities</span> <span>64 users</span>
-            </Box>
-          </Item>
+              <Box
+                style={{
+                  display: "flex",
+                  direction: "cloumn",
+                  justifyContent: "space-between"
+                }}
+              >
+                <span>{name}</span>
+                <span>CCDE</span>
+              </Box>
+              <Box
+                style={{
+                  fontSize: "12px",
+                  display: "flex",
+                  direction: "column",
+                  justifyContent: "space-between"
+                }}
+              >
+                <span>8 Entities</span> <span>64 users</span>
+              </Box>
+            </Item>
+          </button>
         ))}
       </Stack>
     </div>

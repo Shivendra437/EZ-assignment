@@ -2,6 +2,7 @@
 // import Client from "./Component/Client/Client";
 // import Entities from "./Component/Entities/Entities";
 import "./styles.css";
+// import Reuse from "./Component/Reuse/Reuse";
 // import CompanyDetails from "./Component/CompanyDetail/CompanyDetail";
 export default function App() {
   return (
@@ -11,6 +12,13 @@ export default function App() {
       {/* <Client /> */}
       {/* <CompanyDetails /> */}
       {/* <Entities /> */}
+      {/* <Reuse
+        Location="Billing Location"
+        name="Entity Name"
+        code="Entity Code"
+        Valid="MSLA valid through"
+        File="Sharing"
+      /> */}
     </div>
   );
 }

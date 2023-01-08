@@ -1,4 +1,5 @@
 import * as React from "react";
+import ClientHeading from "./ClientHeading";
 import { useState } from "react";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
@@ -37,66 +38,55 @@ export default function Client() {
   // }
   const [name, setName] = useState("CompanyName");
   return (
-    <>
-      {/* <div>
-    <span style={{fontSize:'25px'}}>Client</span>
-    <span><BarChartIcon/></span> 
-    <div > 
-<input  style={{width:'270px',borderRadius:'10px',height:'30px'}}
-type="text" placeholder='Company,entity,user,domain,Service'/>
-<SearchIcon
-style={{position :'relative',marginLeft:'-25px'}}/>
-</div>
-      </div> */}
-      <div
-        style={{
-          display: "flex",
-          direction: "column",
-          width: "100px",
-          height: "100%"
-        }}
-      >
-        <Stack dirction="column" spacing={8}>
-          {arr2.map((el) => (
-            <button
-              onClick={() => setName("Mckinsey & Company")}
-              style={{ border: "none" }}
+    <div
+      style={{
+        display: "flex",
+        direction: "column",
+        width: "100px",
+        height: "100%"
+      }}
+    >
+      <Stack dirction="column" spacing={3}>
+        <ClientHeading />
+        {arr2.map((el) => (
+          <button
+            onClick={() => setName("Mckinsey & Company")}
+            style={{ border: "none" }}
+          >
+            <Item
+              sx={{
+                width: "250px",
+                borderRadius: "15px",
+                "&:hover": {
+                  backgroundColor: "grey",
+                  cursor: "pointer"
+                }
+              }}
             >
-              <Item
-                sx={{
-                  width: "250px",
-                  borderRadius: "15px",
-                  "&:hover": {
-                    backgroundColor: "grey",
-                    cursor: "pointer"
-                  }
+              <Box
+                style={{
+                  display: "flex",
+                  direction: "cloumn",
+                  justifyContent: "space-between"
                 }}
               >
-                <Box
-                  style={{
-                    display: "flex",
-                    direction: "cloumn",
-                    justifyContent: "space-between"
-                  }}
-                >
-                  <span>{name}</span>
-                  <span>CCDE</span>
-                </Box>
-                <Box
-                  style={{
-                    fontSize: "12px",
-                    display: "flex",
-                    direction: "column",
-                    justifyContent: "space-between"
-                  }}
-                >
-                  <span>8 Entities</span> <span>64 users</span>
-                </Box>
-              </Item>
-            </button>
-          ))}
-        </Stack>
-      </div>
-    </>
+                <span>{name}</span>
+                <span>CCDE</span>
+              </Box>
+              <Box
+                style={{
+                  fontSize: "12px",
+                  display: "flex",
+                  direction: "column",
+                  justifyContent: "space-between"
+                }}
+              >
+                <span>8 Entities</span> <span>64 users</span>
+              </Box>
+            </Item>
+          </button>
+        ))}
+      </Stack>
+    </div>
   );
 }

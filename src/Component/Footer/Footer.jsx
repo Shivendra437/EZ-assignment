@@ -18,18 +18,40 @@ const abc = {
   justifyContent: "space-around",
   color: "grey"
 };
+let arra = {
+  name: "ArabicLanguageTranslation",
+  unit: "words",
+  list: "0.1AED",
+  price: "0.09",
+  discount: "10%(19%)"
+};
+let arr = [];
+arr.push(arra);
+arr.push(arra);
+arr.push(arra);
 
 export default function Reuse(props) {
   return (
     <Box sx={{ width: "700px" }}>
       <Stack>
         <Item style={abc}>
-          <span>{props.Location}</span>
-          <span>{props.name}</span>
-          <span>{props.code}</span>
-          <span>{props.valid}</span>
-          <span>{props.File}</span>
+          <span>Service</span>
+          <span>Units</span>
+          <span>Last Price</span>
+          <span>Offered price</span>
+          <span>Discount</span>
         </Item>
+      </Stack>
+      <Stack>
+        {arr.map((el) => (
+          <Item style={abc}>
+            <span>{el.name}</span>
+            <span>{el.unit}</span>
+            <span>{el.list}</span>
+            <span>{el.price}</span>
+            <span>{el.discount}</span>
+          </Item>
+        ))}
       </Stack>
     </Box>
   );

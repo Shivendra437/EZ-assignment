@@ -21,7 +21,7 @@ export default function ResponsiveStack() {
           marginTop: -8,
           backgroundColor: "#0B0B45",
           width: "70px",
-          height: "960px"
+          height: "710px"
         }}
       >
         <Stack

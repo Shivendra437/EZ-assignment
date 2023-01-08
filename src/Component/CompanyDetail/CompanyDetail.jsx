@@ -9,7 +9,7 @@ export default function CompanyDetails() {
       sx={{
         position: "relative",
         marginLeft: "170px",
-        width: "800px",
+        width: "700px",
         height: 200,
         // border: "2px solid black",
         // backgroundColor: '#DEDEDE',

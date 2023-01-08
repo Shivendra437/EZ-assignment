@@ -2,6 +2,7 @@
 // import Client from "./Component/Client/Client";
 // import Entities from "./Component/Entities/Entities";
 import "./styles.css";
+import PriceList from "./Component/PriceList/PriceList";
 // import Reuse from "./Component/Reuse/Reuse";
 // import CompanyDetails from "./Component/CompanyDetail/CompanyDetail";
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         Valid="MSLA valid through"
         File="Sharing"
       /> */}
+      <PriceList />
     </div>
   );
 }

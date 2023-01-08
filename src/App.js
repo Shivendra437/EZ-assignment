@@ -1,6 +1,6 @@
 // import SideBar from "./Component/Sidebar/Sidebar";
 // import Client from "./Component/Client/Client";
-import Entities from "./Component/Entities/Entities";
+// import Entities from "./Component/Entities/Entities";
 import "./styles.css";
 // import CompanyDetails from "./Component/CompanyDetail/CompanyDetail";
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
       {/* <Client/> */}
       {/* <Client /> */}
       {/* <CompanyDetails /> */}
-      <Entities />
+      {/* <Entities /> */}
     </div>
   );
 }

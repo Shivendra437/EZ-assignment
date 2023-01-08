@@ -1,10 +1,10 @@
-import Sidebar from "./Component/Sidebar";
+import SideBar from "./Component/Sidebar/Sidebar";
 import "./styles.css";
 
 export default function App() {
   return (
     <div>
-      <Sidebar />
+      <SideBar />
     </div>
   );
 }

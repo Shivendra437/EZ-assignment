@@ -2,12 +2,14 @@
 // import Client from "./Component/Client/Client";
 // import Entities from "./Component/Entities/Entities";
 import "./styles.css";
-import PriceList from "./Component/PriceList/PriceList";
+// import Address from "./Component/AddressPart/Address";
+// import PriceList from "./Component/PriceList/PriceList";
 // import Reuse from "./Component/Reuse/Reuse";
 // import CompanyDetails from "./Component/CompanyDetail/CompanyDetail";
 export default function App() {
   return (
     <div>
+      {/* <Address /> */}
       {/* <SideBar /> */}
       {/* <Client/> */}
       {/* <Client /> */}

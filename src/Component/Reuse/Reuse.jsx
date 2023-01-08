@@ -12,6 +12,8 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 const abc = {
+  position: "relative",
+  marginLeft: "200px",
   display: "flex",
   justifyContent: "space-around",
   color: "grey"
@@ -19,14 +21,14 @@ const abc = {
 
 export default function Reuse(props) {
   return (
-    <Box sx={{ width: "600px" }}>
+    <Box sx={{ width: "1000px" }}>
       <Stack>
         <Item style={abc}>
           <span>{props.Location}</span>
-          <span>hi</span>
-          <span>hi</span>
-          <span>hi</span>
-          <span>hi</span>
+          <span>{props.name}</span>
+          <span>{props.code}</span>
+          <span>{props.valid}</span>
+          <span>{props.File}</span>
         </Item>
       </Stack>
     </Box>

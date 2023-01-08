@@ -7,9 +7,11 @@ export default function CompanyDetails() {
   return (
     <Box
       sx={{
-        width: "600px",
+        position: "relative",
+        marginLeft: "170px",
+        width: "800px",
         height: 200,
-        border: "2px solid black",
+        // border: "2px solid black",
         // backgroundColor: '#DEDEDE',
         "&:hover": {
           backgroundColor: "#D3D3D3",

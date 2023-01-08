@@ -20,7 +20,7 @@ export default function App() {
         Valid="MSLA valid through"
         File="Sharing"
       /> */}
-      <PriceList />
+      {/* <PriceList /> */}
     </div>
   );
 }
